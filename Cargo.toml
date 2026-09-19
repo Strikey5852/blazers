@@ -1,0 +1,11 @@
+[package]
+name = "blazers"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+toml = "1.1.6"
+serde = { version = "1.0.229", features = ["derive"] }
+reqwest = { version = "0.13.5", features = ["json"] }
+tokio = { version = "1.53.1", features = ["full"] }
+futures = "0.3.34"

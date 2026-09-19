@@ -1,0 +1,31 @@
+# Main settings for blazers
+[settings]
+
+# Target directories
+mods_dir = "mods"
+resourcepacks_dir = "resourcepacks"
+shaderpacks_dir = "shaderpacks"
+
+# Platform to assume when a raw slug is provided without a prefix or URL
+default_provider = "modrinth"
+
+# Mods
+# Supports raw slugs, prefixed slugs, or full URLs
+mods = [
+    "sodium",
+    "https://modrinth.com/mod/iris",
+    "Modrinth:lithium",
+    "Curseforge:jei",
+    "https://www.curseforge.com/minecraft/mc-mods/journeymap",
+]
+
+# Resource Packs
+resourcepacks = [
+    "fresh-animations",
+]
+
+# Shaders
+shaders = [
+    "complementary-reimagined",
+    "https://Modrinth.com/shader/complementary-reimagined",
+]
