@@ -6,26 +6,43 @@ mods_dir = "mods"
 resourcepacks_dir = "resourcepacks"
 shaderpacks_dir = "shaderpacks"
 
+# Defaults for every item below; an item can override any of them.
 # Platform to assume when a raw slug is provided without a prefix or URL
 default_provider = "modrinth"
+loader = "fabric"
+minecraft_version = "1.21.1"
+
+# Entries are a slug/URL or a table overriding the defaults:
+#   "sodium"
+#   { id = "iris", minecraft_version = "1.20.1" }
+#   { id = "jei", loader = "neoforge" }
+#   { id = "create", version = "6.0.4" }
 
 # Mods
-# Supports raw slugs, prefixed slugs, or full URLs
 mods = [
     "sodium",
-    "https://modrinth.com/mod/iris",
-    "Modrinth:lithium",
-    "Curseforge:jei",
-    "https://www.curseforge.com/minecraft/mc-mods/journeymap",
+    # version override
+    { id = "iris", version = "1.8.8" },
+    # minecraft_version override
+    { id = "Modrinth:lithium", minecraft_version = "1.20.1" },
+    # loader override
+    { id = "jei", loader = "neoforge" },
+    # default_provider override, plan-only until curseforge is implemented
+    { id = "create", default_provider = "curseforge" },
+    # slug alias
+    { slug = "https://www.curseforge.com/minecraft/mc-mods/journeymap" },
+    # url alias
+    { url = "https://modrinth.com/mod/modmenu" },
 ]
 
 # Resource Packs
 resourcepacks = [
-    "fresh-animations",
+    # version override
+    { id = "fresh-animations", version = "1.10.3" },
 ]
 
 # Shaders
 shaders = [
-    "complementary-reimagined",
-    "https://Modrinth.com/shader/complementary-reimagined",
+    # version override
+    { id = "complementary-reimagined", version = "r5.9.2" },
 ]
